@@ -4,14 +4,40 @@
     padding : 5%;
 }
 
+.work, .education {
+    margin-top: 20px;
+}
+
+.name{
+    text-align: center;
+}
+
 .basic-information{
     display:flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     gap:10px;
 }
 
 .contact{
     display:flex;
-    flex-direction: column;
-    text-align: right;
+    justify-content: center;
+}
+
+.education-content, .work-content{
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+.name-date{
+    display:flex;
+}
+
+.bold-text, .section-header{
+    font-weight: bold;
+}
+
+.section-header{
+    font-size: larger;
 }
