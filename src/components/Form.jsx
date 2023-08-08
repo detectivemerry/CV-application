@@ -32,16 +32,18 @@ export default function Form({title, fields, isReusable, onSubmit}){
     }
 
     return (
-        <div>
-            {title}
+        <div id = "form">
+            <div class = "title">{title}</div>
             <form onSubmit={handleSubmit}>
             {fields.map((field, idx)=>{
                     return <div key = {idx}>
-                    {field.label} : <input type = {field.type}/>
+                    <input type = {field.type} placeholder={field.label}/>
                     </div>
                 })
             }
-            {isSubmitted? <button type = "submit">Edit</button> : <button type = "submit">Submit</button>}
+            {isSubmitted? 
+                <button id = "submit" type = "submit">Edit</button> : 
+                <button id = "submit" type = "submit">Submit</button>}
             </form>
         </div>
     )

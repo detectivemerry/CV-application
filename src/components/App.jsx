@@ -3,11 +3,12 @@ import '../styles/App.css'
 import NavBar from './Navbar'
 import Form from './Form'
 import Preview from './Preview'
-import formSettings from '../utils/data'
+import forms from '../utils/forms'
+import data from  '../utils/data'
 
 function App() {
 
-  const [currentForms, setCurrentForms] = useState(formSettings);
+  const [currentForms, setCurrentForms] = useState(forms);
 
   const [formData, setFormData] = useState({
     firstName : '',
@@ -35,6 +36,21 @@ function App() {
     }
   }
 
+  const loadExample = () => {
+    setFormData(data);
+  }
+
+  const clearPreview = () => {
+    setFormData({
+      firstName : '',
+      lastName : '',
+      email: '',
+      phone: '',
+      schoolData: [],
+      workData: []
+    })
+  }
+
   const addForm = (title, fields, isReusable, idx) => {
     setCurrentForms((prevData)=>{
       let newData = [...prevData]
@@ -58,10 +74,15 @@ function App() {
             isReusable = {form.isReusable}
             onSubmit = {onSubmit}
             />
-            {form.isReusable && <button onClick = {()=>{addForm(form.title, form.fields, true, idx)}}>Add more</button>}
+            {form.isReusable && <button id = "add-more" onClick = {()=>{addForm(form.title, form.fields, true, idx)}}>Add more</button>}
             </>
           })
         }
+          <div class = "title">Preview Options</div>
+          <div class = "preview-options">
+            <button class = "preview-option" onClick = {loadExample} >Load example</button>
+            <button class = "preview-option" onClick = {clearPreview} >Clear preview</button>
+          </div>
       </div>
       <div className='CV-preview'>
         <Preview formData = {formData} />

@@ -1,4 +1,30 @@
 .title {
-
+    font-weight: 700px;
+    font-size: x-large;
+    margin: 1%;
+    margin-top: 3%;
 }
+
+input{
+    width:100%;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#submit{
+    width: 100%;
+    background-color: rgb(19, 70, 65);
+    margin: 1%;
+    color:white;
+}
+
+#form{
+    background-color: lightgray;
+    width: 100%;
+}
+
+
 

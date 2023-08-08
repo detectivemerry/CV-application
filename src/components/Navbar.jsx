@@ -1,7 +1,8 @@
 import '../styles/Navbar.css'
+
 export default function NavBar(){
     return (
-        <div>
+        <div class = "NavBar">
             CV Generator
         </div>
     )

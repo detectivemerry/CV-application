@@ -1,5 +1,5 @@
 html, body, #root{
-    height: 100vw;
+    height: 100vh;
     width: 100vw;
     margin: 0;
     padding: 0;
@@ -7,18 +7,44 @@ html, body, #root{
 
 .content {
     display: flex;
-    height: 100%;
+    /* height: 100vh; */
+    height: calc(100vh - 6vh);
     max-width: 100vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 3vh;
+    gap: 5%;
 }
 
 .CV-setting {
+    padding: 2%;
     flex:1;
-    background-color: blueviolet;
-    height: 100%;
+    background-color: lightgray;
+    height: calc(100vh - 6vh);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    overflow:auto;
 }
 
 .CV-preview{
     flex:1;
     background-color: blanchedalmond;
     height: 100%;
+}
+
+#add-more{
+    margin-left: 5px;
+    width: 100%;
+    background-color: rgb(59, 120, 115);
+    color:white;
+}
+
+.preview-options{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.preview-options button{
+    flex:1;
+
 }

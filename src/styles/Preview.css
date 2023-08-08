@@ -1,0 +1,17 @@
+.CV{
+    display:flex;
+    flex-direction: column;
+    padding : 5%;
+}
+
+.basic-information{
+    display:flex;
+    justify-content: space-around;
+    gap:10px;
+}
+
+.contact{
+    display:flex;
+    flex-direction: column;
+    text-align: right;
+}
