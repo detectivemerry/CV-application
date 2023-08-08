@@ -1,0 +1,24 @@
+html, body, #root{
+    height: 100vw;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    height: 100%;
+    max-width: 100vw;
+}
+
+.CV-setting {
+    flex:1;
+    background-color: blueviolet;
+    height: 100%;
+}
+
+.CV-preview{
+    flex:1;
+    background-color: blanchedalmond;
+    height: 100%;
+}
